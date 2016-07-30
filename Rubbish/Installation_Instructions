@@ -1,0 +1,67 @@
+
+Programs:
+    gather_merchants:
+        Input: files\companies.csv
+        Output: files\companies_out.csv
+        (companies.csv should be just one column of URLS)
+    deduplicate:
+        Input: files\companies_out.csv
+        Ouput: files\companies_out_deduplicated.csv
+    auto_mailer (also know as "iterate_and_spam"):
+        Input: files\companies_out_deduplicated.csv
+        Before starting auto_mailer, you should deduplicate the list
+        manually using the excel_deduplicator
+        See the youtube video on how to do this.
+
+        It is pretty easy to do, and does not have to be done so often.
+        You would get a list of say 10000 companies, deduplicate it once
+        then start the auto mailer. So it does not make sense to automate
+        this task.
+
+    when running auto_mailer_live it will output also a file
+    \files\spammed.csv
+    with a list of the companies that have been contacted.
+
+    
+How to Run the programs
+-----------------------
+https://youtu.be/_tB8lRd-aVc
+
+How to completely Deduplicate the Sheet (remove companies that
+                                         you have previously
+                                         contacted)
+---------------------------------------
+https://youtu.be/hxUW6Cje-BE
+
+
+The next steps are optional, but it is better in alot of ways to
+run this program through the python interperter. Its easier to make
+changes, track errors and see what is going on.
+
+How to Install The Python Interpreter
+--------------------------------------
+https://youtu.be/MFggys4Uu0U
+Install Google Chrome if you dont already have it.
+
+Install Python
+--------------
+https://www.python.org/ftp/python/2.7.12/python-2.7.12.amd64.msi
+
+Put the folders on the c:\ drive:
+amazon_script
+selenium
+
+Install Selenium
+-----------------
+open the command line in the folder c:\Python27\scripts\
+Then type:
+    pip2 install selenium
+
+That should be all you need to do, but for good measure install selenium again:
+    pip install selenium
+Then, also open the command line in the folder c:\selenium and type:
+    c:\Python27\python.exe setup.py install
+
+
+If it doesnt work, download teamviewer (https://www.teamviewer.com/en/download/windows/)
+and we will get it running together tomorrow
